@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="todo-list">
+    <div class="todo-list__header">
+      <div>TODO list</div>
+      <div (click)="removeTasks()" class="todo-list__delete-button">
+        <mat-icon aria-hidden="false" aria-label="Delete">delete</mat-icon>
+      </div>
+    </div>
+    <div class="todo-list-tasks">
+      <ng-container *ngIf="tasks$ | async as tasks">
+        <ng-container *ngFor="let task of tasks; let i = index">
+          <app-todo-list-task
+            [task]="task"
+            [taskIndex]="i"
+          ></app-todo-list-task>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="task-input">
+      <div class="task-input__add-button" (click)="addTask()">
+        <mat-icon aria-hidden="false" aria-label="Add">add</mat-icon>
+      </div>
+      <div class="input-group-sm w-100">
+        <input
+          required
+          minlength="3"
+          [(ngModel)]="newTaskText"
+          #taskText="ngModel"
+          type="text"
+          class="form-control"
+          aria-label="Default"
+        />
+        <div
+          *ngIf="taskText.invalid && wasAddButtonTouched"
+          class="task-input__validation-error"
+        >
+          Please enter at least 3 symbols.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

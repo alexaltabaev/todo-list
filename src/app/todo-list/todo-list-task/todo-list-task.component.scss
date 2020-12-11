@@ -1,0 +1,36 @@
+.task {
+  display: flex;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.task__check-mark {
+  width: 16px;
+  height: 16px;
+  border: solid black 2px;
+  border-radius: 10px;
+  margin-right: 20px;
+  margin-top: 3px;
+  mat-icon {
+    font-size: 18px;
+    position: relative;
+    bottom: 3px;
+    right: 2px;
+    z-index: 2;
+  }
+
+  &.task__check-mark_done::after {
+    content: "";
+    display: block;
+    position: relative;
+    top: -25px;
+    right: -8px;
+    width: 8px;
+    height: 8px;
+    background: white;
+    z-index: 1;
+    border-radius: 50%;
+  }
+}
+.task__text {
+}

@@ -1,0 +1,7 @@
+<div class="task" (click)="switchStatus()">
+  <div *ngIf="!task.isDone" class="task__check-mark"></div>
+  <div *ngIf="task.isDone" class="task__check-mark task__check-mark_done">
+    <mat-icon aria-hidden="false" aria-label="Check">check</mat-icon>
+  </div>
+  <div class="task__text">{{ task.text }}</div>
+</div>
