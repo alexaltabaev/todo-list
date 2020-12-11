@@ -1,3 +1,13 @@
+Screenshots:
+
+[![f1.png](https://i.postimg.cc/pTGgkGGC/f1.png)](https://postimg.cc/bDnCwTjS)
+
+
+[![f2.png](https://i.postimg.cc/KcdZ2jfN/f2.png)](https://postimg.cc/jC4V6sGw)
+
+
+[![f3.png](https://i.postimg.cc/hvxRj8s0/f3.png)](https://postimg.cc/QKXyYTRB)
+
 # TodoList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
